@@ -1,7 +1,11 @@
-﻿namespace basics04
+﻿using System.Drawing;
+
+namespace basics04
 {
+    enum Genre { Fiction, NonFiction, Science }
     internal class Program
     {
+        
         static void Main(string[] args)
         {
             #region Add a private string password = "secret"; field to a Book class. Try to print it from Main (outside the class). What happens, and why?
@@ -19,6 +23,12 @@
             #region Add a public string Title; field to Book. Set it and print it from Main.
             myBook.Title = "C# Programming";
             Console.WriteLine(myBook.Title);
+            #endregion
+
+
+            #region Declare an enum Genre { Fiction, NonFiction, Science }. Add a Genre property to Book, assign it Genre.Science, and print it.
+            myBook.genre = Genre.Science;
+            Console.WriteLine(myBook.genre);
             #endregion
         }
     }
