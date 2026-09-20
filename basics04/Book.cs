@@ -9,5 +9,7 @@ namespace basics04
         private string password = "secret";
 
         internal int copiesInStock = 5;
+
+        public string Title;
     }
 }

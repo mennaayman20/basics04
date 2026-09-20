@@ -12,8 +12,13 @@
 
 
             #region Add an internal int copiesInStock = 5; field to Book. Print it from Main. Does it compile? Why ?
-            
-            Console.WriteLine(myBook.copiesInStock); 
+            Console.WriteLine(myBook.copiesInStock);
+            #endregion
+
+
+            #region Add a public string Title; field to Book. Set it and print it from Main.
+            myBook.Title = "C# Programming";
+            Console.WriteLine(myBook.Title);
             #endregion
         }
     }
