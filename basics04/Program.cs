@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using Microsoft.VisualBasic;
+using System.Drawing;
 
 namespace basics04
 {
@@ -53,7 +54,30 @@ namespace basics04
             #endregion
 
 
-          
+            #region Given string genreText = "Science";, convert it into a Genre value using Enum.Parse() and print the result.
+            string genreText = "Science";
+            Genre genreParsed = (Genre)Enum.Parse(typeof(Genre), genreText);
+
+            Console.WriteLine(genreParsed);
+            #endregion
+
+
+            #region Given string genreText = "Mystery"; (not a valid Genre value), use Enum.TryParse() to attempt the conversion.Print "Unknown genre" if it fails.
+
+
+             genreText = "Mystery";
+            if (Enum.TryParse<Genre>(genreText, out Genre result))
+            {
+                Console.WriteLine(result);
+            }
+            else
+            {
+                Console.WriteLine("Unknown genre"); // Output: Unknown genre
+            }
+
+            #endregion
+
+
 
 
         }
